@@ -14,7 +14,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHER_KEY);
 const Checkout = () => {
   const searchParams = useSearchParams();
   const options = {
-    mod: "payment",
+    mode: "payment",
     currency: "usd",
     amount: Number(searchParams.get("amount")) * 100,
   };
