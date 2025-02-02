@@ -17,6 +17,10 @@ const Cart = ({ showCart, setShowCart }: CartType) => {
     setShowCart(false);
   };
 
+  const handleRefresh = (url: string) => {
+    window.location.href = url; 
+  };
+
   return (
     showCart && (
       <div
@@ -58,13 +62,12 @@ const Cart = ({ showCart, setShowCart }: CartType) => {
           </ul>
         </div>
         <div className="mt-5 space-y-4 text-center">
-          <Link
-            href="/cart"
-            onClick={() => window.location.reload()}
+          <button
+            onClick={() => handleRefresh("/cart")}
             className="block px-5 py-3 text-sm text-gray-100 transition bg-primary-100 rounded hover:bg-primary-200"
           >
             View my cart ({cart?.length})
-          </Link>
+          </button>
 
           <Link
             href="/"

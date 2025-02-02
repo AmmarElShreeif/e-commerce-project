@@ -15,6 +15,10 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { cart, setCart } = useContext(CartContext);
 
+   const handleRefresh = (url: string) => {
+    window.location.href = url;
+   };
+
   useEffect(() => {
     const url = window.location.href.toString();
     setIsLoggedIn(url.includes("sign-up") || url.includes("sign-in"));
@@ -72,12 +76,12 @@ const Header = () => {
                 <ul className="flex items-center gap-6 text-base">
                   {navigationItems.map((item, index) => (
                     <li key={index}>
-                      <Link
+                      <button
                         className="text-primary-200 transition font-semibold hover:text-primary-200/60"
                         href={item.href}
                       >
                         {item.name}
-                      </Link>
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -87,22 +91,20 @@ const Header = () => {
             <div className="flex items-center gap-4">
               {!user ? (
                 <div className="sm:flex sm:gap-4">
-                  <Link
-                    onClick={() => window.location.reload()}
+                  <button
+                    onClick={() => handleRefresh("/sign-in")}
                     className="rounded-md bg-primary-100 transition hover:bg-primary-200 px-5 py-2.5 text-sm font-semibold text-white shadow"
-                    href="/sign-in"
                   >
                     Login
-                  </Link>
+                  </button>
 
                   <div className="hidden sm:flex">
-                    <Link
-                      onClick={() => window.location.reload()}
+                    <button
+                      onClick={() => handleRefresh("/sign-up")}
                       className="rounded-md bg-gray-100 border border-gray-300 transition hover:bg-gray-300 px-5 py-2.5 text-sm font-semibold text-primary-100"
-                      href="/sign-up"
                     >
                       Register
-                    </Link>
+                    </button>
                   </div>
                 </div>
               ) : (
