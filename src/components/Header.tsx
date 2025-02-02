@@ -88,20 +88,18 @@ const Header = () => {
               {!user ? (
                 <div className="sm:flex sm:gap-4">
                   <Link
-                    onClick={() => window.location.reload()}
                     className="rounded-md bg-primary-100 transition hover:bg-primary-200 px-5 py-2.5 text-sm font-semibold text-white shadow"
                     href="/sign-in"
                   >
-                    Login
+                    <span onClick={() => window.location.reload()}>Login</span>
                   </Link>
 
                   <div className="hidden sm:flex">
                     <Link
-                      onClick={() => window.location.reload()}
                       className="rounded-md bg-gray-100 border border-gray-300 transition hover:bg-gray-300 px-5 py-2.5 text-sm font-semibold text-primary-100"
                       href="/sign-up"
                     >
-                      Register
+                      <span onClick={() => window.location.reload()}>Register</span>
                     </Link>
                   </div>
                 </div>
