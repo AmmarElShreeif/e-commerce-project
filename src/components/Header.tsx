@@ -91,20 +91,37 @@ const Header = () => {
             <div className="flex items-center gap-4">
               {!user ? (
                 <div className="sm:flex sm:gap-4">
+<<<<<<< HEAD
                   <button
                     onClick={() => handleRefresh("/sign-in")}
+=======
+                  <Link
+>>>>>>> 208f63d0fab23840c8d566c78c816fbc0a1d768d
                     className="rounded-md bg-primary-100 transition hover:bg-primary-200 px-5 py-2.5 text-sm font-semibold text-white shadow"
                   >
+<<<<<<< HEAD
                     Login
                   </button>
 
                   <div className="hidden sm:flex">
                     <button
                       onClick={() => handleRefresh("/sign-up")}
+=======
+                    <span onClick={() => window.location.reload()}>Login</span>
+                  </Link>
+
+                  <div className="hidden sm:flex">
+                    <Link
+>>>>>>> 208f63d0fab23840c8d566c78c816fbc0a1d768d
                       className="rounded-md bg-gray-100 border border-gray-300 transition hover:bg-gray-300 px-5 py-2.5 text-sm font-semibold text-primary-100"
                     >
+<<<<<<< HEAD
                       Register
                     </button>
+=======
+                      <span onClick={() => window.location.reload()}>Register</span>
+                    </Link>
+>>>>>>> 208f63d0fab23840c8d566c78c816fbc0a1d768d
                   </div>
                 </div>
               ) : (
