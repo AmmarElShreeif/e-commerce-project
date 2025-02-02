@@ -20,7 +20,7 @@ const ProductList: React.FC<ProductListProps> = ({ productList }) => {
   };
 
   return (
-    <div className="py-32 px-7 flex sm:flex-wrap flex-nowrap items-center gap-10 justify-center">
+    <div className="py-32 px-7 flex flex-wrap items-center gap-10 justify-center">
       {productList.map((product: ProductType) => (
         <div key={product.id}>
           <div

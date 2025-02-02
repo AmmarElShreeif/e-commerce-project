@@ -4,7 +4,7 @@ import Image from "next/image";
 const Features = () => {
   return (
     <div className="bg-white shadow-md px-4 md:px-7 rounded-lg py-7">
-      <div className="flex items-center justify-center flex-wrap sm:flex-nowrap gap-x-40">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {featuresItems.map((item, index) => (
           <div key={index} className="flex items-center space-x-4">
             <div className="text-3xl">

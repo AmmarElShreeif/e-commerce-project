@@ -60,6 +60,7 @@ const Cart = ({ showCart, setShowCart }: CartType) => {
         <div className="mt-5 space-y-4 text-center">
           <Link
             href="/cart"
+            onClick={() => window.location.reload()}
             className="block px-5 py-3 text-sm text-gray-100 transition bg-primary-100 rounded hover:bg-primary-200"
           >
             View my cart ({cart?.length})

@@ -1,11 +1,5 @@
 "use client";
-import {
-  Dispatch,
-  SetStateAction,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import { useContext, useEffect, useState } from "react";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { MenuIcon, ShoppingCartIcon } from "lucide-react";
 import Image from "next/image";
@@ -63,7 +57,11 @@ const Header = () => {
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
-              <Link className="flex text-primary-100" href="/">
+              <Link
+                onClick={() => window.location.reload()}
+                className="flex text-primary-100"
+                href="/"
+              >
                 <Image alt="logos" src="./logo.svg" width={30} height={30} />
                 <span className="font-extrabold ml-2 text-lg">TrendHive</span>
               </Link>
@@ -90,6 +88,7 @@ const Header = () => {
               {!user ? (
                 <div className="sm:flex sm:gap-4">
                   <Link
+                    onClick={() => window.location.reload()}
                     className="rounded-md bg-primary-100 transition hover:bg-primary-200 px-5 py-2.5 text-sm font-semibold text-white shadow"
                     href="/sign-in"
                   >
@@ -98,6 +97,7 @@ const Header = () => {
 
                   <div className="hidden sm:flex">
                     <Link
+                      onClick={() => window.location.reload()}
                       className="rounded-md bg-gray-100 border border-gray-300 transition hover:bg-gray-300 px-5 py-2.5 text-sm font-semibold text-primary-100"
                       href="/sign-up"
                     >

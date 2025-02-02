@@ -28,6 +28,13 @@ export const featuresItems = [
   },
 ];
 
+export const socialMediaItems = [
+  "/scoial/facebook.png",
+  "/scoial/twitter.png",
+  "/scoial/linkedin.png",
+  "/scoial/github-sign.png",
+];
+
 export type ProductType = {
   [x: string]: string | number | never[] | any;
   id: string;

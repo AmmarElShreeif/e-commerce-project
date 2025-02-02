@@ -1,5 +1,5 @@
 "use client";
-import React, { Dispatch, SetStateAction, useContext, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useRouter } from "next/navigation";
 import { DeleteIcon } from "lucide-react";
 import { CartContext } from "@/context/CartContext";
@@ -117,9 +117,10 @@ const CartSection = () => {
 
                 <div className="flex justify-end">
                   <button
-                    onClick={() =>
-                      router.push(`/checkout?amount=${getTotalAmount()}`)
-                    }
+                    onClick={() => {
+                      router.push(`/checkout?amount=${getTotalAmount()}`);
+                      window.location.reload();
+                    }}
                     className="block px-5 py-3 text-sm font-bold text-gray-100 transition bg-primary-100 rounded hover:bg-primary-200"
                   >
                     Checkout
