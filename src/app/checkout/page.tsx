@@ -13,12 +13,8 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHER_KEY);
 
 const Checkout = () => {
   const searchParams = useSearchParams();
-<<<<<<< HEAD
-
+  
   const options: StripeElementsOptionsMode = {
-=======
-  const options = {
->>>>>>> 9f47865e745d76ba79d26200f29718044800f627
     mode: "payment",
     currency: "usd",
     amount: Number(searchParams.get("amount")) * 100,
