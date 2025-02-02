@@ -76,12 +76,12 @@ const Header = () => {
                 <ul className="flex items-center gap-6 text-base">
                   {navigationItems.map((item, index) => (
                     <li key={index}>
-                      <button
+                      <Link
                         className="text-primary-200 transition font-semibold hover:text-primary-200/60"
                         href={item.href}
                       >
                         {item.name}
-                      </button>
+                      </Link>
                     </li>
                   ))}
                 </ul>
