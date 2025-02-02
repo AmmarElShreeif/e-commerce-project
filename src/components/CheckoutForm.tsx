@@ -112,7 +112,7 @@ const CheckoutForm = ({ amount }: { amount: number }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="mx-32 md:mx-[320px] mt-12">
+      <div className="mx-[100px] md:mx-[320px] mt-12">
         <PaymentElement />
         <button
           onClick={() => router.push("/payment-confirm")}
