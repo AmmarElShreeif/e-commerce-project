@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Elements } from "@stripe/react-stripe-js";
-import { loadStripe } from "@stripe/stripe-js";
+import { loadStripe, StripeElementsOptionsMode } from "@stripe/stripe-js";
 import CheckoutForm from "@/components/CheckoutForm";
 import { useSearchParams } from "next/navigation";
 
@@ -13,8 +13,9 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHER_KEY);
 
 const Checkout = () => {
   const searchParams = useSearchParams();
-  const options = {
-    mod: "payment",
+
+  const options: StripeElementsOptionsMode = {
+    mode: "payment",
     currency: "usd",
     amount: Number(searchParams.get("amount")) * 100,
   };
