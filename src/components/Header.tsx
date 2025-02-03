@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 import { useContext, useEffect, useState } from "react";
 import { UserButton, useUser } from "@clerk/nextjs";
 import { MenuIcon, ShoppingCartIcon } from "lucide-react";
