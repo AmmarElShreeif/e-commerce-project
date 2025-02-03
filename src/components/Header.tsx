@@ -61,14 +61,13 @@ const Header = () => {
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="md:flex md:items-center md:gap-12">
-              <Link
-                onClick={() => window.location.reload()}
+              <button
+                onClick={() => handleRefresh("/")}
                 className="flex text-primary-100"
-                href="/"
               >
                 <Image alt="logos" src="./logo.svg" width={30} height={30} />
                 <span className="font-extrabold ml-2 text-lg">TrendHive</span>
-              </Link>
+              </button>
             </div>
 
             <div className="hidden md:block">
