@@ -15,9 +15,9 @@ const Header = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { cart, setCart } = useContext(CartContext);
 
-   const handleRefresh = (url: string) => {
+  const handleRefresh = (url: string) => {
     window.location.href = url;
-   };
+  };
 
   useEffect(() => {
     const url = window.location.href.toString();
@@ -76,12 +76,12 @@ const Header = () => {
                 <ul className="flex items-center gap-6 text-base">
                   {navigationItems.map((item, index) => (
                     <li key={index}>
-                      <button
+                      <Link
                         className="text-primary-200 transition font-semibold hover:text-primary-200/60"
                         href={item.href}
                       >
                         {item.name}
-                      </button>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -100,10 +100,9 @@ const Header = () => {
 
                   <div className="hidden sm:flex">
                     <button
-					onClick={() => handleRefresh("/sign-up")}
-                    className="rounded-md bg-gray-100 border border-gray-300 transition hover:bg-gray-300 px-5 py-2.5 text-sm font-semibold text-primary-100"
+                      onClick={() => handleRefresh("/sign-up")}
+                      className="rounded-md bg-gray-100 border border-gray-300 transition hover:bg-gray-300 px-5 py-2.5 text-sm font-semibold text-primary-100"
                     >
-
                       Register
                     </button>
                   </div>

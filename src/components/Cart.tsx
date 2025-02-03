@@ -18,7 +18,7 @@ const Cart = ({ showCart, setShowCart }: CartType) => {
   };
 
   const handleRefresh = (url: string) => {
-    window.location.href = url; 
+    window.location.href = url;
   };
 
   return (
@@ -61,7 +61,7 @@ const Cart = ({ showCart, setShowCart }: CartType) => {
             ))}
           </ul>
         </div>
-        <div className="mt-5 space-y-4 text-center">
+        <div className="flex flex-col justify-center items-center w-full mt-5 space-y-4 text-center">
           <button
             onClick={() => handleRefresh("/cart")}
             className="block px-5 py-3 text-sm text-gray-100 transition bg-primary-100 rounded hover:bg-primary-200"

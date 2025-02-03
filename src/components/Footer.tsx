@@ -17,7 +17,7 @@ const Footer = () => {
       <footer>
         <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-            {/* Logo Section */}
+           
             <div>
               <div className="flex justify-center text-primary-100 sm:justify-start">
                 <Link className="flex text-primary-100" href="/">
@@ -40,7 +40,7 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Links Section */}
+           
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:col-span-2">
               <div className="text-center sm:text-left">
                 <p className="text-lg font-semibold text-primary-100">
@@ -157,7 +157,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Footer Bottom Section */}
+          
           <div className="mt-12 border-t border-gray-200 pt-6">
             <div className="text-center sm:flex sm:justify-between sm:text-left">
               <p className="text-sm text-primary-100">

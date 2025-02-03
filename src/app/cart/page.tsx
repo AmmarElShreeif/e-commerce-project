@@ -118,8 +118,8 @@ const CartSection = () => {
                 <div className="flex justify-end">
                   <button
                     onClick={() => {
-                      router.push(`/checkout?amount=${getTotalAmount()}`);
                       window.location.reload();
+                      router.push(`/checkout?amount=${getTotalAmount()}`);
                     }}
                     className="block px-5 py-3 text-sm font-bold text-gray-100 transition bg-primary-100 rounded hover:bg-primary-200"
                   >
