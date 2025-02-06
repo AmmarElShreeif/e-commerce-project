@@ -16,7 +16,7 @@ const LogIn = () => {
   const router = useRouter();
 
   const handleGoogleSignIn = async () => {
-    await signUp?.authenticateWithRedirect({
+    await signIn?.authenticateWithRedirect({
       strategy: "oauth_google",
       redirectUrl: "/",
       redirectUrlComplete: "/",
