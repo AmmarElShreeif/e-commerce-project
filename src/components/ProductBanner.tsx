@@ -3,7 +3,6 @@ import React, { useContext } from "react";
 import RattingReview from "./RatingReview";
 import ProductSkeleton from "./SkeletonProduct";
 import { useUser } from "@clerk/nextjs";
-import { useRouter } from "next/navigation";
 import CartApis from "@/utils/CartApis";
 import { CartContext } from "@/context/CartContext";
 import { ProductType } from "@/data";
@@ -15,12 +14,15 @@ interface productType {
 
 const ProductBanner = ({ product, isLoading }: productType) => {
   const user = useUser();
-  const router = useRouter();
   const { setCart }: any = useContext(CartContext);
+
+  const handleRefresh = (url: string) => {
+    window.location.href = url;
+  };
 
   const handleAddToCart = async () => {
     if (!user) {
-      router.push("/sign-in");
+      handleRefresh("/sign-in");
     } else {
       const data = {
         data: {

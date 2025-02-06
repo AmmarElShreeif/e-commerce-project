@@ -1,6 +1,5 @@
 "use client";
 import React, { useContext, useState } from "react";
-import { useRouter } from "next/navigation";
 import { DeleteIcon } from "lucide-react";
 import { CartContext } from "@/context/CartContext";
 import Loading from "@/components/Loading";
@@ -8,9 +7,12 @@ import CartApis from "@/utils/CartApis";
 import { ProductType } from "@/data";
 
 const CartSection = () => {
-  const router = useRouter();
   const { cart, setCart } = useContext(CartContext);
   const [isDeleting, setIsDeleting] = useState(false);
+
+  const handleRefresh = (url: string) => {
+    window.location.href = url;
+  };
 
   const deleteCartItemFromList = async (documentId: string) => {
     if (isDeleting) return;
@@ -118,8 +120,7 @@ const CartSection = () => {
                 <div className="flex justify-end">
                   <button
                     onClick={() => {
-                      window.location.reload();
-                      router.push(`/checkout?amount=${getTotalAmount()}`);
+                      handleRefresh(`/checkout?amount=${getTotalAmount()}`);
                     }}
                     className="block px-5 py-3 text-sm font-bold text-gray-100 transition bg-primary-100 rounded hover:bg-primary-200"
                   >
