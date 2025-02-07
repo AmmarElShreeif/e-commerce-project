@@ -1,5 +1,5 @@
 "use client";
-import { useSignIn, useSignUp } from "@clerk/nextjs";
+import { useSignIn } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Input from "@/components/Input";
@@ -9,14 +9,13 @@ import Link from "next/link";
 
 const LogIn = () => {
   const { isLoaded, signIn, setActive } = useSignIn();
-  const { signUp } = useSignUp();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
 
   const handleGoogleSignIn = async () => {
-    await signUp?.authenticateWithRedirect({
+    await signIn?.authenticateWithRedirect({
       strategy: "oauth_google",
       redirectUrl: "/",
       redirectUrlComplete: "/",
