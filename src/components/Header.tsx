@@ -89,7 +89,7 @@ const Header = () => {
 
             <div className="flex items-center gap-4">
               {!user ? (
-                <div className="sm:flex sm:gap-4">
+                <div className="flex sm:gap-4">
                   <button
                     onClick={() => handleRefresh("/sign-in")}
                     className="rounded-md bg-primary-100 transition hover:bg-primary-200 px-5 py-2.5 text-sm font-semibold text-white shadow"
