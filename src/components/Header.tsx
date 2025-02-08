@@ -97,7 +97,7 @@ const Header = () => {
                     Login
                   </button>
 
-                  <div className="hidden sm:flex">
+                  <div className="sm:flex">
                     <button
                       onClick={() => handleRefresh("/sign-up")}
                       className="rounded-md bg-gray-100 border border-gray-300 transition hover:bg-gray-300 px-5 py-2.5 text-sm font-semibold text-primary-100"
@@ -121,12 +121,6 @@ const Header = () => {
                   )}
                 </div>
               )}
-
-              <div className="block md:hidden">
-                <button className="rounded bg-gray-100 p-2 text-primary-100 transition hover:text-gray-600/75">
-                  <MenuIcon size={20} />
-                </button>
-              </div>
             </div>
           </div>
         </div>
