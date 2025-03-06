@@ -103,7 +103,7 @@ export default function Navbar() {
                     onClick={() => handleRefresh("login")}
                     variant="outline"
                     size="sm"
-                    className="text-sm px-4 bg-transparent cursor-pointer text-black dark:text-white border-black dark:border-white hover:bg-white hover:text-white dark:hover:text-black"
+                    className="text-sm px-4 bg-transparent cursor-pointer text-black dark:text-white border-black dark:border-white hover:bg-white hover:text-black dark:hover:text-black"
                   >
                     <a>Login</a>
                   </Button>
@@ -191,7 +191,7 @@ export default function Navbar() {
                     onClick={() => handleRefresh("login")}
                     variant="outline"
                     size="sm"
-                    className="text-sm px-4 bg-transparent cursor-pointer text-black dark:text-white border-black dark:border-white hover:bg-white hover:text-white dark:hover:text-black"
+                    className="text-sm px-4 bg-transparent cursor-pointer text-black dark:text-white border-black dark:border-white hover:bg-white hover:text-black dark:hover:text-black"
                   >
                     <a>Login</a>
                   </Button>{" "}
